@@ -71,6 +71,7 @@ body {
 
 .card-column {
     margin-bottom: 20px;
+    max-width: 400px;
 }
 
 .input-form {
