@@ -41,7 +41,7 @@ async function getList() {
         </div>`;
         bodyHTML = bodyHTML + gridCard;
     }
-    
+
     document.getElementById('main-content').innerHTML = bodyHTML;
 }
 

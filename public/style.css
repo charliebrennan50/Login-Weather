@@ -74,6 +74,10 @@ body {
     max-width: 400px;
 }
 
+.card-body {
+    text-align: center;
+}
+
 .input-form {
     margin: 20px;
 }
@@ -84,10 +88,15 @@ body {
     margin-top: 40px;
 }
 
+#main-content {
+    margin: 10px;
+}
+
 .navbar,
 .card-header {
     background-color: #7952b3;
     color: #fff;
+    text-align: center;
 }
 
 .navbar-brand {
