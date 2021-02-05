@@ -7,9 +7,9 @@ async function getData() {
     const response = await fetch('/api');
     const data = await response.json();
 
-    for (item of data) {
+    for (var item of data) {
         const dateString = new Date(item.timestamp).toLocaleString();
-        let popupText = `Location: ${item.location} Date: ${dateString} Note: ${item.notes}`
+        let popupText = `Location: ${item.location} Date: ${dateString} Note: ${item.notes}`;
         var marker = L.marker([item.latitude, item.longitude]).addTo(mymap).bindPopup(popupText);
     }
 }
@@ -22,7 +22,7 @@ async function getList() {
     let bodyHTML = '';
     let gridCard;
 
-    for (item of data) {
+    for (var item of data) {
 
         let date = new Date(item.timestamp).toLocaleString();
         let temperature = item.temperature.toFixed(0);

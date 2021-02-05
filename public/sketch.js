@@ -19,7 +19,7 @@ document.getElementById('myBtn').addEventListener("click", function () {
       let weatherOptions = "units=imperial";
       let apiKey = "d2e382f0a6d1e0d614cb71aca19f1c25";
 
-      let weatherURL = `${api}?lat=${lat}&lon=${long}&${weatherOptions}&appid=${apiKey}`
+      let weatherURL = `${api}?lat=${lat}&lon=${long}&${weatherOptions}&appid=${apiKey}`;
       let response = await fetch(weatherURL);
       let weather = await response.json();
 
@@ -70,7 +70,7 @@ document.getElementById('myBtn').addEventListener("click", function () {
         headers: {
           'Content-Type': 'application/json'
         }
-      }
+      };
 
       // use fetch to POST data 
       fetch('/api', options).then(response => {
@@ -99,6 +99,6 @@ function updateMap(lat, long) {
   mymap.setView(new L.LatLng(lat, long), 8);
 
   // assign popup text to marker to display when clicked
-  let popupText = `Latutude: ${lat.toFixed(4)}, Longitude: ${long.toFixed(4)}`
+  let popupText = `Latutude: ${lat.toFixed(4)}, Longitude: ${long.toFixed(4)}`;
   var marker = L.marker([lat, long]).addTo(mymap).bindPopup(popupText);
 }
